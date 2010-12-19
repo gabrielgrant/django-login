@@ -1,0 +1,19 @@
+A very basic login and account management app for django. The functionality
+and templates mirror that of the admin app, but without requiring the user
+to be a staff member to use it.
+
+##Installation
+
+Ensure you've installed and configured the admin app, and then include 'login' in your list of installed apps:
+
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.admin',
+    'django.contrib.sessions',
+    'login'
+
+
+Mapthe url specified in your settings.LOGIN_URL to django-login's views.
+For example, using the defaults, add the following line to your URLconf:
+
+    (r'^accounts/', include('login.urls')),
